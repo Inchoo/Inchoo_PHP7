@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Inchoo_PHP7>
+            <version>0.1.0</version>
+        </Inchoo_PHP7>
+    </modules>
+
+    <global>
+        <models>
+            <inchoo_php7>
+                <class>Inchoo_PHP7_Model</class>
+            </inchoo_php7>
+
+            <!-- Rewriting these models for PHP 7 compatibility -->
+            <core>
+                <rewrite>
+                    <layout>Inchoo_PHP7_Model_Layout</layout>
+                </rewrite>
+            </core>
+            <importexport>
+                <rewrite>
+                    <import_uploader>Inchoo_PHP7_Model_Import_Uploader</import_uploader>
+                </rewrite>
+            </importexport>
+        </models>
+    </global>
+</config>
