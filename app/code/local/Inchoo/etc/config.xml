@@ -21,7 +21,9 @@
             <importexport>
                 <rewrite>
                     <import_uploader>Inchoo_PHP7_Model_Import_Uploader</import_uploader>
-                    <export_entity_product_type_abstract>Inchoo_PHP7_Model_Export_Entity_Product_Type_Abstract</export_entity_product_type_abstract>
+                    <export_entity_product_type_configurable>Inchoo_PHP7_Model_Export_Entity_Product_Type_Configurable</export_entity_product_type_configurable>
+                    <export_entity_product_type_grouped>Inchoo_PHP7_Model_Export_Entity_Product_Type_Grouped</export_entity_product_type_grouped>
+                    <export_entity_product_type_simple>Inchoo_PHP7_Model_Export_Entity_Product_Type_Simple</export_entity_product_type_simple>
                     <export_entity_customer>Inchoo_PHP7_Model_Export_Entity_Customer</export_entity_customer>
                 </rewrite>
             </importexport>

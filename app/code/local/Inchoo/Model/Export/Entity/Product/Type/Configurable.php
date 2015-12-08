@@ -4,8 +4,8 @@
  * Inchoo d.o.o.
  * @author Ivan Čurdinjaković <ivan.curdinjakovic@inchoo.net>
  */ 
-abstract class Inchoo_PHP7_Model_Export_Entity_Product_Type_Abstract
-    extends Mage_ImportExport_Model_Export_Entity_Product_Type_Abstract
+class Inchoo_PHP7_Model_Export_Entity_Product_Type_Configurable
+    extends Mage_ImportExport_Model_Export_Entity_Product_Type_Configurable
 {
     public function overrideAttribute(Mage_Catalog_Model_Resource_Eav_Attribute $attribute)
     {
