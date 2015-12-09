@@ -1,8 +1,9 @@
 <?php
 /**
  * Created on: 08.12.15.
- * Inchoo d.o.o.
- * @author Ivan Čurdinjaković <ivan.curdinjakovic@inchoo.net>
+ * @copyright Inchoo d.o.o. (http://inchoo.net)
+ * @author Ivan Čurdinjaković
+ * @license MIT
  */ 
 class Inchoo_PHP7_Model_Export_Entity_Product_Type_Grouped
     extends Mage_ImportExport_Model_Export_Entity_Product_Type_Grouped
