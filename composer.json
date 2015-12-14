@@ -1,0 +1,11 @@
+{
+  "name": "inchoo/php7",
+  "type": "magento-module",
+  "description": "PHP 7 compatibility extension for Magento 1 by Inchoo",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ivan Čurdinjaković"
+    }
+  ]
+}
