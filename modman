@@ -1,0 +1,5 @@
+# app/code
+app/code/local/Inchoo/Model            app/code/local/Inchoo/Model
+app/code/local/Inchoo/etc            app/code/local/Inchoo/etc
+# app/etc
+app/etc/modules/Inchoo_PHP7.xml            app/etc/modules/Inchoo_PHP7.xml
