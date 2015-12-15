@@ -16,6 +16,7 @@
             <core>
                 <rewrite>
                     <layout>Inchoo_PHP7_Model_Layout</layout>
+                    <file_uploader>Inchoo_PHP7_Model_File_Uploader</file_uploader>
                 </rewrite>
             </core>
             <importexport>
