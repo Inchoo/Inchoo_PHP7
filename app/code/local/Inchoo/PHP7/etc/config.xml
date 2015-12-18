@@ -7,6 +7,19 @@
     </modules>
 
     <global>
+		<sales>
+            <quote>
+                <totals>
+                    <msrp>
+                        <before>grand_total</before>
+                    </msrp>
+                    <shipping>
+                        <after>subtotal,freeshipping,tax_subtotal,msrp</after>
+                    </shipping>
+                </totals>
+            </quote>
+        </sales>
+	
         <models>
             <inchoo_php7>
                 <class>Inchoo_PHP7_Model</class>
