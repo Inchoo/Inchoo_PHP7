@@ -199,6 +199,9 @@ class Mage_Core_Model_Resource_Session implements Zend_Session_SaveHandler_Inter
     /**
      * Fetch session data
      *
+     * (Fix for PHP 7 to make sure it really returns string type as docblock promises, because otherwise session
+     * crashes.)
+     *
      * @param string $sessId
      * @return string
      */
