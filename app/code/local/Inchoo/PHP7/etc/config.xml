@@ -30,7 +30,6 @@
             <core>
                 <rewrite>
                     <layout>Inchoo_PHP7_Model_Layout</layout>
-                    <resource_session>Inchoo_PHP7_Model_Resource_Session</resource_session>
                 </rewrite>
             </core>
             <importexport>
