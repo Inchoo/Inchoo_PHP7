@@ -2,11 +2,12 @@
 <config>
     <modules>
         <Inchoo_PHP7>
-            <version>0.2.0</version>
+            <version>0.3.0</version>
         </Inchoo_PHP7>
     </modules>
 
     <global>
+        <!-- Fix for incorrect sorting in the calculation of the discount -->
 		<sales>
             <quote>
                 <totals>
@@ -29,6 +30,7 @@
             <core>
                 <rewrite>
                     <layout>Inchoo_PHP7_Model_Layout</layout>
+                    <resource_session>Inchoo_PHP7_Model_Resource_Session</resource_session>
                 </rewrite>
             </core>
             <importexport>
