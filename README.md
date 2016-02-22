@@ -15,12 +15,14 @@ MIT. (See LICENSE.txt).
 ## Issues
 Yes. _(Of course.)_ See Issues tab. Issue reporting is welcome. Pull requests are welcome.
 
-## Instalation
+## Installation
 For Composer install, available on Firegento: http://packages.firegento.com/ .
 
 Or just download ZIP and copy files to appropriate locations.
 
-## PHP 7 & mod_php
+## Notes
+
+### PHP 7 & mod_php
 If you are using mod_php (quite common on development localhosts), remember to edit your .htaccess file, because settings under
 
     <IfModule mod_php5.c>
@@ -32,3 +34,10 @@ will not be set. You can leave that block in case of reverting to PHP 5, but add
         php_value max_execution_time 18000
         php_flag session.auto_start off
     </IfModule>
+
+### &new in /lib
+There is some very old code in `lib/PEAR` and `lib/Varien/Pear` that uses `&new`. This is removed from PHP 7, but we were never able to reproduce the crash in real life so it's not fixed by this extension. The only way we were able to reach the code was when compiling **all** code to opcache.
+
+*If you ever trigger this code in real use, please let us know!*
+
+If you are doing opcache compiling, workaround is simple - put these two folders into opcache blacklist (see opcache.blacklist_filename php.ini setting).
