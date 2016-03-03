@@ -46,6 +46,11 @@
                     <product_link_api_v2>Inchoo_PHP7_Model_Product_Link_Api_V2</product_link_api_v2>
                 </rewrite>
             </catalog>
+            <enterprise_targetrule>
+                <rewrite>
+                    <resource_index>Inchoo_PHP7_Model_Resource_Index</resource_index>
+                </rewrite>
+            </enterprise_targetrule>
         </models>
     </global>
 </config>
