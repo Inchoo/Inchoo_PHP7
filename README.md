@@ -41,3 +41,25 @@ There is some very old code in `lib/PEAR` and `lib/Varien/Pear` that uses `&new`
 *If you ever trigger this code in real use, please let us know!*
 
 If you are doing opcache compiling, workaround is simple - put these two folders into opcache blacklist (see opcache.blacklist_filename php.ini setting).
+
+### Memcache
+As investigated by Ivan Weiler:
+
+It seems native php memcache extension currently has problem with session_regenerate_id(). Same situation was with php-redis few moths ago, php7 changed something related to session_regenerate_id that broke similar php extensions.
+
+For example, it won't work if you simply try:
+
+    session_save_path('tcp://localhost:11211?persistent=1&weight=2&timeout=10&retry_interval=10');
+    session_module_name('memcache');
+
+    session_start();
+    session_regenerate_id(); // throws Catchable fatal error !!
+
+So, Magento is just using built in session handler for memcache, which isn't working at the moment. It seems php-memcache needs to be fixed, not Magento, and it will be eventually.
+
+I also tested memcacheD, which is newer extension and it seems memcached is working, so maybe it can be used instead in Magento. You can try installing php memcached extension (it's php-memcached on Ubuntu) and change `local.xml` to something like this:
+
+    <session_save><![CDATA[memcached]]></session_save>
+    <session_save_path><![CDATA[localhost:11211]]></session_save_path>
+
+memcached instead of memcache, tcp:// removed for memcached. I never used memcached in production, but it works for me on my dev machine, login works.
