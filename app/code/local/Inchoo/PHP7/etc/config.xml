@@ -8,7 +8,7 @@
 
     <global>
         <!-- Fix for incorrect sorting in the calculation of the discount -->
-		<sales>
+        <sales>
             <quote>
                 <totals>
                     <msrp>
@@ -52,5 +52,13 @@
                 </rewrite>
             </enterprise_targetrule>
         </models>
+
+        <helpers>
+            <core>
+                <rewrite>
+                    <data>Inchoo_PHP7_Helper_Data</data>
+                </rewrite>
+            </core>
+        </helpers>
     </global>
 </config>
