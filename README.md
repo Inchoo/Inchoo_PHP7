@@ -3,7 +3,7 @@
 PHP 7 compatibility extension for Magento 1 by Inchoo. Article with some tests and stats: http://inchoo.net/magento/its-alive/ .
 
 ## Compatibility
-Tested on M CE 1.9.2.2 & 1.9.2.3. Reported working on M EE 1.14.2.2. Older versions of Magento may work, but may also have other problems, not fixed by this extension.
+Tested on M CE 1.9.2.2 - 1.9.2.4. Reported working on M EE 1.14.2.2. Older versions of Magento may work, but may also have other problems, not fixed by this extension.
 
 If you can, upgrade to freshest Magento core first. If you can't, this may be a good starting point to make a branch for older versions.
 
