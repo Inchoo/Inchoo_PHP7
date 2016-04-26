@@ -5,7 +5,7 @@
  * @author Benjam Welker
  * @license MIT
  */
-class Inchoo_PHP7_Model_Product_Link_Api_V2 extends Mage_ImportExport_Model__Product_Link_Api_V2
+class Inchoo_PHP7_Model_Product_Link_Api_V2 extends Mage_Catalog_Model_Product_Link_Api_V2
 {
 
     public function assign($type, $productId, $linkedProductId, $data = array(), $identifierType = null)
