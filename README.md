@@ -29,15 +29,19 @@ Or just download ZIP of the latest release and copy files to appropriate locatio
 ### PHP 7 & mod_php
 If you are using mod_php (quite common on development localhosts), remember to edit your .htaccess file, because settings under
 
-    <IfModule mod_php5.c>
+```apacheconf
+<IfModule mod_php5.c>
+```
 
 will not be set. You can leave that block in case of reverting to PHP 5, but add something like this one too:
 
-    <IfModule mod_php7.c>
-        php_value memory_limit 256M
-        php_value max_execution_time 18000
-        php_flag session.auto_start off
-    </IfModule>
+```apacheconf
+<IfModule mod_php7.c>
+    php_value memory_limit 256M
+    php_value max_execution_time 18000
+    php_flag session.auto_start off
+</IfModule>
+```
 
 ### &new in /lib
 There is some very old code in `lib/PEAR` and `lib/Varien/Pear` that uses `&new`. This is removed from PHP 7, but we were never able to reproduce the crash in real life so it's not fixed by this extension. The only way we were able to reach the code was when compiling **all** code to opcache.
@@ -53,17 +57,21 @@ It seems native php memcache extension currently has problem with session_regene
 
 For example, it won't work if you simply try:
 
-    session_save_path('tcp://localhost:11211?persistent=1&weight=2&timeout=10&retry_interval=10');
-    session_module_name('memcache');
+```php
+session_save_path('tcp://localhost:11211?persistent=1&weight=2&timeout=10&retry_interval=10');
+session_module_name('memcache');
 
-    session_start();
-    session_regenerate_id(); // throws Catchable fatal error !!
+session_start();
+session_regenerate_id(); // throws Catchable fatal error !!
+```
 
 So, Magento is just using built in session handler for memcache, which isn't working at the moment. It seems php-memcache needs to be fixed, not Magento, and it will be eventually.
 
 I also tested memcacheD, which is newer extension and it seems memcached is working, so maybe it can be used instead in Magento. You can try installing php memcached extension (it's php-memcached on Ubuntu) and change `local.xml` to something like this:
 
-    <session_save><![CDATA[memcached]]></session_save>
-    <session_save_path><![CDATA[localhost:11211]]></session_save_path>
+```xml
+<session_save><![CDATA[memcached]]></session_save>
+<session_save_path><![CDATA[localhost:11211]]></session_save_path>
+```
 
 memcached instead of memcache, tcp:// removed for memcached. I never used memcached in production, but it works for me on my dev machine, login works.
