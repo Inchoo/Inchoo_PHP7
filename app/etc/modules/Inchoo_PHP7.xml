@@ -8,6 +8,8 @@
                 <Mage_Core/>
                 <Mage_ImportExport/>
 				<Mage_Sales/>
+                <Mage_Catalog/>
+                <Mage_Enterprise_Targetrule/>
             </depends>
         </Inchoo_PHP7>
     </modules>
