@@ -9,7 +9,7 @@
                 <Mage_ImportExport/>
 				<Mage_Sales/>
                 <Mage_Catalog/>
-                <Enterprise_Targetrule/>
+                <Enterprise_TargetRule/>
             </depends>
         </Inchoo_PHP7>
     </modules>
