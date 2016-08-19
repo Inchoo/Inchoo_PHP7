@@ -35,6 +35,7 @@
             <importexport>
                 <rewrite>
                     <import_uploader>Inchoo_PHP7_Model_Import_Uploader</import_uploader>
+                    <import_entity_product>Inchoo_PHP7_Model_Import_Entity_Product</import_entity_product>
                     <export_entity_product_type_configurable>Inchoo_PHP7_Model_Export_Entity_Product_Type_Configurable</export_entity_product_type_configurable>
                     <export_entity_product_type_grouped>Inchoo_PHP7_Model_Export_Entity_Product_Type_Grouped</export_entity_product_type_grouped>
                     <export_entity_product_type_simple>Inchoo_PHP7_Model_Export_Entity_Product_Type_Simple</export_entity_product_type_simple>
