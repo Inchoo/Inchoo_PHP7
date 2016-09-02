@@ -1,10 +1,11 @@
 # app/code
-app/code/local/Inchoo/PHP7                          app/code/local/Inchoo/PHP7
+app/code/local/Inchoo/PHP7                              app/code/local/Inchoo/PHP7
 
 # app/etc
-app/etc/modules/Inchoo_PHP7.xml                     app/etc/modules/Inchoo_PHP7.xml
+app/etc/modules/Inchoo_PHP7.xml                         app/etc/modules/Inchoo_PHP7.xml
 
 # mage/core
-app/code/local/Mage/Connect/Packager.php            app/code/local/Mage/Connect/Packager.php
-app/code/local/Mage/Core/Model/File/Uploader.php    app/code/local/Mage/Core/Model/File/Uploader.php
-app/code/local/Mage/Core/Model/Resource/Session.php app/code/local/Mage/Core/Model/Resource/Session.php
+app/code/local/Mage/Connect/Packager.php                app/code/local/Mage/Connect/Packager.php
+app/code/local/Mage/Core/Model/File/Uploader.php        app/code/local/Mage/Core/Model/File/Uploader.php
+app/code/local/Mage/Core/Model/Resource/Session.php     app/code/local/Mage/Core/Model/Resource/Session.php
+app/code/local/Mage/Core/Helper/Inchoo/PHP7/Data.php    app/code/local/Mage/Core/Helper/Inchoo/PHP7/Data.php
