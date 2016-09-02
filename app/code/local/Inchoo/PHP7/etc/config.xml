@@ -52,7 +52,7 @@
         <helpers>
             <core>
                 <rewrite>
-                    <data>Inchoo_PHP7_Helper_Data</data>
+                    <data>Mage_Core_Helper_Inchoo_PHP7_Data</data>
                 </rewrite>
             </core>
         </helpers>

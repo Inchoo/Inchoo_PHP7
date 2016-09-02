@@ -1,6 +1,6 @@
 <?php
 
-class Inchoo_PHP7_Helper_Data extends Mage_Core_Helper_Data {
+class Mage_Core_Helper_Inchoo_PHP7_Data extends Mage_Core_Helper_Data {
 
     /**
      * Decodes the given $encodedValue string which is
