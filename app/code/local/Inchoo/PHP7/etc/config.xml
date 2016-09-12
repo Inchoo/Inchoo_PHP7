@@ -48,13 +48,5 @@
                 </rewrite>
             </catalog>
         </models>
-
-        <helpers>
-            <core>
-                <rewrite>
-                    <data>Inchoo_PHP7_Helper_Data</data>
-                </rewrite>
-            </core>
-        </helpers>
     </global>
 </config>
