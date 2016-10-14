@@ -1,4 +1,7 @@
 # Change Log
+## [unreleased]
+### Changed
+- fixed rewrite conflict with AvS_FastSimpleImport - @sprankhub
 
 ## [1.0.6] - 2016-09-08
 ### Added
