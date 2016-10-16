@@ -1,7 +1,11 @@
 # Change Log
 ## [unreleased]
 ### Changed
-- fixed rewrite conflict with AvS_FastSimpleImport - @sprankhub
+- this is the release for Magento core 1.9.3; older versions are supported from _1.9.2.4_ branch.
+
+### Removed
+- all model overwrites - they are no longer needed.
+- Mage_Core_Model_File_Uploader overload - also fixed in new core.
 
 ## [1.0.6] - 2016-09-08
 ### Added

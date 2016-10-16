@@ -4,12 +4,6 @@
         <Inchoo_PHP7>
             <active>true</active>
             <codePool>local</codePool>
-            <depends>
-                <Mage_Core/>
-                <Mage_ImportExport/>
-                <Mage_Sales/>
-                <Mage_Catalog/>
-            </depends>
         </Inchoo_PHP7>
     </modules>
 </config>
