@@ -1,7 +1,7 @@
 # Change Log
-## [unreleased]
+## [2.0.0] 2016-10-18
 ### Changed
-- this is the release for Magento core 1.9.3; older versions are supported from _1.9.2.4_ branch.
+- this is the release for Magento core 1.9.3; older versions are supported from _1.9.2.4_ branch and 1.* releases.
 
 ### Removed
 - all model overwrites - they are no longer needed.
