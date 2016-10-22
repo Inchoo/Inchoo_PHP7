@@ -23,7 +23,7 @@ Tested on M CE 1.9.3.
 
 This version removes all model overwrites and Mage_Core_Model_File_Uploader overload. That's fixed in 1.9.3 core.
 
-What's left: 
+Included fixes are:
 - incorrect sorting in the calculation of the discount fix
 - JSON decoding fix
 - resource session fix
