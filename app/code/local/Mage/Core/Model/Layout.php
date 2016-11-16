@@ -22,6 +22,9 @@
  * @package     Mage_Core
  * @copyright  Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ *
+ * File copied from:   Magento CE 1.9.2.4
+ * Patches marked by:  //  PHP7 FIX
  */
 
 
@@ -552,7 +555,10 @@ class Mage_Core_Model_Layout extends Varien_Simplexml_Config
         $out = '';
         if (!empty($this->_output)) {
             foreach ($this->_output as $callback) {
+                //  PHP7 FIX
+                // $out .= $this->getBlock($callback[0])->$callback[1]();
                 $out .= $this->getBlock($callback[0])->{$callback[1]}();
+                //  /PHP7 FIX
             }
         }
 
