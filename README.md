@@ -28,6 +28,7 @@ Included fixes are:
 - JSON decoding fix
 - resource session fix
 - Connect Packager fix
+- Import/Export file upload fix
 
 ## 3rd party extensions
 May be incompatible with PHP 7. We can't do anything about that. But their authors can.

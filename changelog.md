@@ -1,4 +1,8 @@
 # Change Log
+## Unreleased
+### Added
+- Mage_ImportExport_Model_Import_Uploader - fix when uploading files (Uncaught Error: Function name must be a string in .../app/code/core/Mage/ImportExport/Model/Import/Uploader.php:135)
+
 ## [2.0.0] 2016-10-18
 ### Changed
 - this is the release for Magento core 1.9.3; older versions are supported from _1.9.2.4_ branch and 1.* releases.

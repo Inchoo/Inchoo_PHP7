@@ -28,5 +28,16 @@
                 </rewrite>
             </core>
         </helpers>
+
+        <models>
+            <inchoo_php7>
+                <class>Inchoo_PHP7_Model</class>
+            </inchoo_php7>
+            <importexport>
+                <rewrite>
+                    <import_uploader>Inchoo_PHP7_Model_ImportExport_Import_Uploader</import_uploader>
+                </rewrite>
+            </importexport>
+        </models>
     </global>
 </config>
