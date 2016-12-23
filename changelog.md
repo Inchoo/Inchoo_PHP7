@@ -1,4 +1,11 @@
 # Change Log
+## [unreleased]
+### Removed
+- XML totals sort order fix from config.xml
+
+### Added
+- topological sort implemented in Mage_Sales_Model_Config_Ordered override (this should fix not only Magento Core problems with totals sorting, but also ensure 3rd party extensions which add something to totals work properly with PHP 7.)
+
 ## [2.0.0] 2016-10-18
 ### Changed
 - this is the release for Magento core 1.9.3; older versions are supported from _1.9.2.4_ branch and 1.* releases.
