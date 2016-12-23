@@ -2,6 +2,10 @@
 ## [unreleased]
 ### Changed
 - fixed rewrite conflict with AvS_FastSimpleImport - @sprankhub
+- removed XML totals sort order fix from config.xml
+
+### Added
+- topological sort implemented in Mage_Sales_Model_Config_Ordered override (this should fix not only Magento Core problems with totals sorting, but also ensure 3rd party extensions which add something to totals work properly with PHP 7.)
 
 ## [1.0.6] - 2016-09-08
 ### Added
