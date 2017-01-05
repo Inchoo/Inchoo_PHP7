@@ -14,5 +14,12 @@
                 </rewrite>
             </core>
         </helpers>
+        <models>
+            <core>
+                <rewrite>
+                    <layout>Inchoo_PHP7_Model_Core_Layout</layout>
+                </rewrite>
+            </core>
+        </models>
     </global>
 </config>
