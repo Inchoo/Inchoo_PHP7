@@ -1,5 +1,5 @@
 # Change Log
-## [unreleased]
+## [2.0.1] 2017-02-02
 ### Removed
 - XML totals sort order fix from config.xml
 
