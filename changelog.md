@@ -1,7 +1,9 @@
 # Change Log
-## [unreleased]
+## [1.0.7] - 2017-02-02
 ### Changed
 - fixed rewrite conflict with AvS_FastSimpleImport - @sprankhub
+
+### Removed
 - removed XML totals sort order fix from config.xml
 
 ### Added
