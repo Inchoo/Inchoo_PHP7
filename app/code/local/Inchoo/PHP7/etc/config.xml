@@ -2,25 +2,11 @@
 <config>
     <modules>
         <Inchoo_PHP7>
-            <version>1.0.2</version>
+            <version>1.0.7</version>
         </Inchoo_PHP7>
     </modules>
 
     <global>
-        <!-- Fix for incorrect sorting in the calculation of the discount -->
-        <sales>
-            <quote>
-                <totals>
-                    <msrp>
-                        <before>grand_total</before>
-                    </msrp>
-                    <shipping>
-                        <after>subtotal,freeshipping,tax_subtotal,msrp</after>
-                    </shipping>
-                </totals>
-            </quote>
-        </sales>
-
         <models>
             <inchoo_php7>
                 <class>Inchoo_PHP7_Model</class>
@@ -35,6 +21,7 @@
             <importexport>
                 <rewrite>
                     <import_uploader>Inchoo_PHP7_Model_Import_Uploader</import_uploader>
+                    <import_entity_product>Inchoo_PHP7_Model_Import_Entity_Product</import_entity_product>
                     <export_entity_product_type_configurable>Inchoo_PHP7_Model_Export_Entity_Product_Type_Configurable</export_entity_product_type_configurable>
                     <export_entity_product_type_grouped>Inchoo_PHP7_Model_Export_Entity_Product_Type_Grouped</export_entity_product_type_grouped>
                     <export_entity_product_type_simple>Inchoo_PHP7_Model_Export_Entity_Product_Type_Simple</export_entity_product_type_simple>
