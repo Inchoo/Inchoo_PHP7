@@ -7,7 +7,7 @@
             <depends>
                 <Mage_Core/>
                 <Mage_ImportExport/>
-				<Mage_Sales/>
+                <Mage_Sales/>
                 <Mage_Catalog/>
                 <Enterprise_TargetRule/>
             </depends>
