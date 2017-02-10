@@ -1,6 +1,9 @@
 <?php
 
-class Inchoo_PHP7_Helper_Data extends Mage_Core_Helper_Data {
+class Inchoo_PHP7_Helper_Data extends Mage_Core_Helper_Data
+{
+    /** @var string $_moduleName Compatibility for translations, and maybe other stuff which uses module names. */
+    protected $_moduleName = 'Mage_Core';
 
     /**
      * Decodes the given $encodedValue string which is
