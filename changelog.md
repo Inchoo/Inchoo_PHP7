@@ -1,4 +1,11 @@
 # Change Log
+## [Unreleased]
+### Changed
+- a bit of love to composer.json (support & suggest sections)
+
+### Added
+- shell/inchoo_php7_test.php - initial implementation of a test tool 
+
 ## [1.0.7] - 2017-02-02
 ### Changed
 - fixed rewrite conflict with AvS_FastSimpleImport - @sprankhub
