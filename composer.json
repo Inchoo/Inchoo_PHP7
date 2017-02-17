@@ -8,8 +8,16 @@
             "name": "Ivan Čurdinjaković"
         }
     ],
+    "support": {
+        "issues": "https://github.com/Inchoo/Inchoo_PHP7/issues",
+        "wiki": "https://github.com/Inchoo/Inchoo_PHP7/wiki",
+        "source": "https://github.com/Inchoo/Inchoo_PHP7"
+    },
     "require": {
         "magento-hackathon/magento-composer-installer": "*"
+    },
+    "suggest": {
+        "phpseclib/mcrypt_compat": "PHP 7.1 polyfill for the mcrypt extension from PHP <= 7.0."
     },
     "repositories": [
         {

@@ -1,4 +1,11 @@
 # Change Log
+## [Unreleased]
+### Changed
+- a bit of love to composer.json (support & suggest sections)
+
+### Added
+- shell/inchoo_php7_test.php - initial implementation of a test tool 
+
 ## [2.0.1] 2017-02-02
 ### Removed
 - XML totals sort order fix from config.xml

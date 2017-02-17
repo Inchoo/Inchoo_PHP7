@@ -49,3 +49,6 @@ For older Magento cores, use 1.9.2.4-dev or dev-EE for Enterprise version. For n
 Or just download ZIP of the latest release and copy files to appropriate locations.
 
 Remember to clear the cache. Also, check [Proper Installation](https://github.com/Inchoo/Inchoo_PHP7/wiki/ProperInstallation) Wiki page.
+
+## Test
+After installation, run shell/inchoo_php7_test.php. This automated testing tool will check if the extension is successfully installed, is its version appropriate for your Magento Core version, is your server PHP version good, are rewrites in place, etc.
