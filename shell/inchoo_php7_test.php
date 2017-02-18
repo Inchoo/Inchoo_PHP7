@@ -136,12 +136,11 @@ class Inchoo_PHP7_Test extends Mage_Shell_Abstract
 
         // TODO: branch to tests appropriate for this version
 
-        // Note: core helper rewrite is fixed on Wheelership
-        /*$this->doTest(
+        $this->doTest(
             [$this, 'isCoreHelperRewritten'],
             'Core helper is rewritten.',
             'Core helper rewrite PROBLEM!'
-        );*/
+        );
         $this->doTest(
             [$this, 'isCoreLayoutRewritten'],
             'Core layout model is rewritten',
