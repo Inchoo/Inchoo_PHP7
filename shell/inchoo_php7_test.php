@@ -6,8 +6,7 @@ require_once 'abstract.php';
  *
  * Test if Inchoo_PHP is installed and integrated into Magento correctly.
  *
- * TODO: test all rewrites
- * TODO: check PHP version vs Mcrypt. Sugest Mcrypt polyfill on PHP 7.1 (But recommend not using PHP 7.1)
+ * TODO: check PHP version vs Mcrypt. Sugest Mcrypt polyfill on PHP 7.1
  * IDEA: for testing core overwrites - implement a const in those classes, so we can check for its existence
  *
  * @author Ivan Čurdinjaković <ivan.curdinjakovic@inchoo.net>
@@ -32,14 +31,68 @@ class Inchoo_PHP7_Test extends Mage_Shell_Abstract
         return $this->coreHelper->isModuleEnabled('Inchoo_PHP7');
     }
 
+    /**
+     * Check models class name, or parent class name.
+     *
+     * Parent class name - in case some other rewrite inherits from Inchoo_PHP7, fixing a rewrite conflict.
+     *
+     * @param object $model
+     * @param string $className
+     * @return bool
+     */
+    private function checkRewrite($model, string $className): bool
+    {
+        return (get_class($model) === $className || get_parent_class($model) === $className);
+    }
+
     private function isCoreHelperRewritten(): bool
     {
-        return (get_class($this->coreHelper) === 'Inchoo_PHP7_Helper_Data');
+        return $this->checkRewrite($this->coreHelper, 'Inchoo_PHP7_Helper_Data');
     }
 
     private function isCoreLayoutRewritten(): bool
     {
-        return (get_class(Mage::getModel('core/layout')) === 'Inchoo_PHP7_Model_Layout');
+        return $this->checkRewrite(Mage::getModel('core/layout'), 'Inchoo_PHP7_Model_Layout');
+    }
+
+    private function isImportEntityProductRewritten(): bool
+    {
+        return $this->checkRewrite(
+            Mage::getModel('importexport/import_entity_product'),
+            'Inchoo_PHP7_Model_Import_Entity_Product'
+        );
+    }
+
+    private function isExportEntityConfigurableRewritten(): bool
+    {
+        return $this->checkRewrite(
+            Mage::getModel('importexport/export_entity_product_type_configurable'),
+            'Inchoo_PHP7_Model_Export_Entity_Product_Type_Configurable'
+        );
+    }
+
+    private function isExportEntityGroupedRewritten(): bool
+    {
+        return $this->checkRewrite(
+            Mage::getModel('importexport/export_entity_product_type_grouped'),
+            'Inchoo_PHP7_Model_Export_Entity_Product_Type_Grouped'
+        );
+    }
+
+    private function isExportEntitySimpleRewritten(): bool
+    {
+        return $this->checkRewrite(
+            Mage::getModel('importexport/export_entity_product_type_simple'),
+            'Inchoo_PHP7_Model_Export_Entity_Product_Type_Simple'
+        );
+    }
+
+    private function isExportEntityCustomerRewritten(): bool
+    {
+        return $this->checkRewrite(
+            Mage::getModel('importexport/export_entity_customer'),
+            'Inchoo_PHP7_Model_Export_Entity_Customer'
+        );
     }
 
     /**
@@ -65,13 +118,38 @@ class Inchoo_PHP7_Test extends Mage_Shell_Abstract
                 } elseif (version_compare($mCoreVersion, '1.14.3.0') >= 0){
                     exit("You need version 2.* of Inchoo_PHP7 extension for this core!\n");
                 } else {
-                    echo "Magento core version is too low. This MAY or MAY NOT work!";
+                    echo "Magento core version is too low. This MAY or MAY NOT work!\n";
                 }
             } else {
-                // TODO: implement for extension v2
+                if (version_compare($mCoreVersion, '1.14.2.0') >= 0 && version_compare($mCoreVersion, '1.14.3.0') < 0){
+                    exit("You need version 1.* of Inchoo_PHP7 extension for this core!\n");
+                } elseif (version_compare($mCoreVersion, '1.14.3.0') >= 0){
+                    $this->testsSuccessful++;
+                    echo "Ok.\n";
+                } else {
+                    echo "Magento core version is too low. This MAY or MAY NOT work!\n";
+                }
             }
         } elseif ($edition === 'Community'){
-            // TODO: implement for community and extension v1 & v2
+            if ($extensionMajorVersion == 1) {
+                if (version_compare($mCoreVersion, '1.9.2.0') >= 0 && version_compare($mCoreVersion, '1.9.3.0') < 0){
+                    $this->testsSuccessful++;
+                    echo "Ok.\n";
+                } elseif (version_compare($mCoreVersion, '1.9.3.0') >= 0){
+                    exit("You need version 2.* of Inchoo_PHP7 extension for this core!\n");
+                } else {
+                    echo "Magento core version is too low. This MAY or MAY NOT work!\n";
+                }
+            } else {
+                if (version_compare($mCoreVersion, '1.9.2.0') >= 0 && version_compare($mCoreVersion, '1.9.3.0') < 0){
+                    exit("You need version 1.* of Inchoo_PHP7 extension for this core!\n");
+                } elseif (version_compare($mCoreVersion, '1.9.3.0') >= 0){
+                    $this->testsSuccessful++;
+                    echo "Ok.\n";
+                } else {
+                    echo "Magento core version is too low. This MAY or MAY NOT work!\n";
+                }
+            }
         } else {
             exit ("This edition of Magento is NOT supported: $edition!");
         }
@@ -93,7 +171,7 @@ class Inchoo_PHP7_Test extends Mage_Shell_Abstract
                     ." differ.)\n";
             } else {
                 echo "CLI version of PHP is Ok: ".PHP_VERSION." (Note that CLI and web server versions of PHP may"
-                ." differ.)\n";
+                    ." differ.)\n";
             }
         } else {
             exit("You can't run this script on PHP < 7.0. CLI PHP version is: ".PHP_VERSION."\n");
@@ -134,18 +212,44 @@ class Inchoo_PHP7_Test extends Mage_Shell_Abstract
         );
         $extensionVersion = $this->checkExtensionAndCoreVersions();
 
-        // TODO: branch to tests appropriate for this version
-
-        $this->doTest(
-            [$this, 'isCoreHelperRewritten'],
-            'Core helper is rewritten.',
-            'Core helper rewrite PROBLEM!'
-        );
-        $this->doTest(
-            [$this, 'isCoreLayoutRewritten'],
-            'Core layout model is rewritten',
-            'Core layout model rewrite PROBLEM!'
-        );
+        // Inchoo_PHP7 1.* specific tests
+        if ($extensionVersion === 1) {
+            $this->doTest(
+                [$this, 'isCoreHelperRewritten'],
+                'Core helper is rewritten.',
+                'Core helper rewrite PROBLEM!'
+            );
+            $this->doTest(
+                [$this, 'isCoreLayoutRewritten'],
+                'Core layout model is rewritten.',
+                'Core layout model rewrite PROBLEM!'
+            );
+            $this->doTest(
+                [$this, 'isImportEntityProductRewritten'],
+                'Core import entity product model is rewritten.',
+                'Core import entity product model rewrite PROBLEM!'
+            );
+            $this->doTest(
+                [$this, 'isExportEntityConfigurableRewritten'],
+                'Core export entity product configurable model is rewritten.',
+                'Core export entity product configurable rewrite PROBLEM!'
+            );
+            $this->doTest(
+                [$this, 'isExportEntityGroupedRewritten'],
+                'Core export entity product grouped model is rewritten.',
+                'Core export entity product grouped rewrite PROBLEM!'
+            );
+            $this->doTest(
+                [$this, 'isExportEntitySimpleRewritten'],
+                'Core export entity product simple model is rewritten.',
+                'Core export entity product simple rewrite PROBLEM!'
+            );
+            $this->doTest(
+                [$this, 'isExportEntityCustomerRewritten'],
+                'Core export entity customer model is rewritten.',
+                'Core export entity customer rewrite PROBLEM!'
+            );
+        }
 
         echo "Tests successful: $this->testsSuccessful/$this->testsRun.\n";
     }
