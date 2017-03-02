@@ -125,4 +125,15 @@ class Mage_Core_Model_File_Uploader extends Varien_File_Uploader
             }
         }
     }
+
+    /**
+     * Returns extension of the uploaded file
+     *
+     * @return string
+     */
+    public function getFileExtension()
+    {
+        return $this->_fileExists ? pathinfo($this->_file['name'], PATHINFO_EXTENSION) : '';
+    }
+    
 }
