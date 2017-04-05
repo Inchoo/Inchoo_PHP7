@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Inchoo_PHP7>
-            <version>1.0.7</version>
+            <version>1.1.0</version>
         </Inchoo_PHP7>
     </modules>
 

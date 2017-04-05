@@ -1,5 +1,5 @@
 # Change Log
-## [Unreleased]
+## [1.1.0] - 2017-04-05
 ### Changed
 - a bit of love to composer.json (support & suggest sections)
 
