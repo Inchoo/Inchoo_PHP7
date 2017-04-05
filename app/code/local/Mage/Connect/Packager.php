@@ -33,6 +33,8 @@
  */
 class Mage_Connect_Packager
 {
+    const INCHOO_PHP7 = true; // Test const to check if this file is properly overridden
+
     /**
      * Constructor
      */

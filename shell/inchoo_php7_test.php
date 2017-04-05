@@ -7,7 +7,6 @@ require_once 'abstract.php';
  * Test if Inchoo_PHP is installed and integrated into Magento correctly.
  *
  * TODO: check PHP version vs Mcrypt. Sugest Mcrypt polyfill on PHP 7.1
- * IDEA: for testing core overwrites - implement a const in those classes, so we can check for its existence
  *
  * @author Ivan Čurdinjaković <ivan.curdinjakovic@inchoo.net>
  */
@@ -43,6 +42,16 @@ class Inchoo_PHP7_Test extends Mage_Shell_Abstract
     private function checkRewrite($model, string $className): bool
     {
         return (get_class($model) === $className || get_parent_class($model) === $className);
+    }
+
+    /**
+     * Checks if a class has INCHOO_PHP7 const, proving it is correctly overriden
+     * @param string $class
+     * @return bool
+     */
+    private function checkOverride(string $class): bool
+    {
+        return defined("$class::INCHOO_PHP7");
     }
 
     private function isCoreHelperRewritten(): bool
@@ -93,6 +102,19 @@ class Inchoo_PHP7_Test extends Mage_Shell_Abstract
             Mage::getModel('importexport/export_entity_customer'),
             'Inchoo_PHP7_Model_Export_Entity_Customer'
         );
+    }
+
+    private function isPackagerOverriden(): bool
+    {
+        return $this->checkOverride('Mage_Connect_Packager');
+    }
+    private function isUploaderOverriden(): bool
+    {
+        return $this->checkOverride('Mage_Core_Model_File_Uploader');
+    }
+    private function isSessionOverriden(): bool
+    {
+        return $this->checkOverride('Mage_Core_Model_Resource_Session');
     }
 
     /**
@@ -212,8 +234,24 @@ class Inchoo_PHP7_Test extends Mage_Shell_Abstract
         );
         $extensionVersion = $this->checkExtensionAndCoreVersions();
 
+        $this->doTest(
+            [$this, 'isPackagerOverriden'],
+            'Magento Connect Packager is overridden.',
+            'Magento Connect Packager override PROBLEM!'
+        );
+        $this->doTest(
+            [$this, 'isSessionOverriden'],
+            'Magento Session Resource is overridden.',
+            'Magento File Uploader override PROBLEM!'
+        );
+
         // Inchoo_PHP7 1.* specific tests
         if ($extensionVersion === 1) {
+            $this->doTest(
+                [$this, 'isUploaderOverriden'],
+                'Magento File Uploader is overridden.',
+                'Magento File Uploader override PROBLEM!'
+            );
             $this->doTest(
                 [$this, 'isCoreHelperRewritten'],
                 'Core helper is rewritten.',
