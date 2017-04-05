@@ -34,6 +34,8 @@
  */
 class Mage_Core_Model_File_Uploader extends Varien_File_Uploader
 {
+    const INCHOO_PHP7 = true; // Test const to check if this file is properly overriden
+
     /**
      * Flag, that defines should DB processing be skipped
      *

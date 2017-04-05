@@ -33,6 +33,8 @@
  */
 abstract class Mage_Sales_Model_Config_Ordered extends Mage_Core_Model_Config_Base
 {
+    const INCHOO_PHP7 = true; // Test const to check if this file is properly overriden
+
     /**
      * Cache key for collectors
      *

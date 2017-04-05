@@ -34,6 +34,8 @@
  */
 class Mage_Core_Model_Resource_Session implements Zend_Session_SaveHandler_Interface
 {
+    const INCHOO_PHP7 = true; // Test const to check if this file is properly overriden
+
     /**
      * Session maximum cookie lifetime
      */
