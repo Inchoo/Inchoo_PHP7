@@ -5,7 +5,7 @@ PHP 7 compatibility extension for Magento 1 core by Inchoo. Article with some te
 ## Compatibility
 Carefully choose the release that's appropriate for your Magento core!
 
-### 1.0.7
+### 1.1.0
 Tested on M CE 1.9.2.2 - 1.9.2.4 & M EE 1.14.2.2 - 1.14.2.4. Note that this version is also needed for these cores with SUPEE-8788 applied.
 
 (CE version of extension is in 1.9.2.4 branch, and EE version is in EE branch.)
@@ -18,7 +18,7 @@ Backwards compatible with PHP. Tested by us on PHP 5.6 & 5.5. Users have reporte
 
 Read the [Wiki](https://github.com/Inchoo/Inchoo_PHP7/wiki)! It contains a lot of great information and stuff you need to do or know about running M1 on PHP7.
 
-### 2.0.1
+### 2.1.0
 Tested on M CE 1.9.3.* & M EE 1.14.3.*.
 
 This version removes all model overwrites and Mage_Core_Model_File_Uploader overload. That's fixed in 1.9.3 core.
