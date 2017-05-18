@@ -1,4 +1,8 @@
 # Change Log
+## [Unreleased]
+### Changed
+- https instead of http for packages.firegento.com (by @EmPeWe).
+
 ## [2.1.0] - 2017-04-05
 ### Changed
 - a bit of love to composer.json (support & suggest sections)
