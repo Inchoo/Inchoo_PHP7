@@ -8,8 +8,6 @@ require_once dirname($_SERVER['SCRIPT_FILENAME']) . '/abstract.php';
  *
  * Test if Inchoo_PHP is installed and integrated into Magento correctly.
  *
- * TODO: check PHP version vs Mcrypt. Sugest Mcrypt polyfill on PHP 7.1
- *
  * @author Ivan Čurdinjaković <ivan.curdinjakovic@inchoo.net>
  */
 class Inchoo_PHP7_Test extends Mage_Shell_Abstract

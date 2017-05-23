@@ -2,6 +2,7 @@
 ## [Unreleased]
 ### Changed
 - https instead of http for packages.firegento.com (by @EmPeWe).
+- smarter require in inchoo_php7_test (by @szepeviktor)
 
 ## [2.1.0] - 2017-04-05
 ### Changed
