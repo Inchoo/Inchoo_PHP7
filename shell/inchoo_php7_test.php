@@ -1,5 +1,7 @@
 <?php
-require_once 'abstract.php';
+
+require_once dirname($_SERVER['SCRIPT_FILENAME']) . '/abstract.php';
+
 /**
  * Created on: 13.02.17.
  * Inchoo d.o.o.
