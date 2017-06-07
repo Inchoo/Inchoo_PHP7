@@ -18,7 +18,7 @@ Backwards compatible with PHP. Tested by us on PHP 5.6 & 5.5. Users have reporte
 
 Read the [Wiki](https://github.com/Inchoo/Inchoo_PHP7/wiki)! It contains a lot of great information and stuff you need to do or know about running M1 on PHP7.
 
-### 2.1.0
+### 2.1.1
 Tested on M CE 1.9.3.* & M EE 1.14.3.*.
 
 This version removes all model overwrites and Mage_Core_Model_File_Uploader overload. That's fixed in 1.9.3 core.
