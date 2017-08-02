@@ -1,4 +1,9 @@
 # Change Log
+##[2.1.1-extended] - 2017-07-05
+### Changed
+- Added Mage/Core/Model/Layout.php
+- fixed call in line 555
+
 ## [2.1.1] - 2017-06-07
 ### Changed
 - https instead of http for packages.firegento.com (by @EmPeWe).
