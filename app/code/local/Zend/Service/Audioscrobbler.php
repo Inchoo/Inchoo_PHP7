@@ -69,9 +69,9 @@ class Zend_Service_Audioscrobbler
     {
         $this->set('version', '1.0');
 
-        iconv_set_encoding('output_encoding', 'UTF-8');
-        iconv_set_encoding('input_encoding', 'UTF-8');
-        iconv_set_encoding('internal_encoding', 'UTF-8');
+        (PHP_VERSION_ID < 50600) ? iconv_set_encoding('output_encoding', 'UTF-8') : ini_set('default_charset', 'UTF-8');
+        (PHP_VERSION_ID < 50600) ? iconv_set_encoding('input_encoding', 'UTF-8') : ini_set('default_charset', 'UTF-8');
+        (PHP_VERSION_ID < 50600) ? iconv_set_encoding('internal_encoding', 'UTF-8') : ini_set('default_charset', 'UTF-8');
     }
 
     /**
