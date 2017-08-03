@@ -1,4 +1,8 @@
 # Change Log
+##[2.1.2] - 2017-08-03
+### Changed
+- fix for Zend Framework 1, thx to https://gist.github.com/renttek/29beaaa1e90909639501
+
 ##[2.1.1-extended] - 2017-07-05
 ### Changed
 - Added Mage/Core/Model/Layout.php
