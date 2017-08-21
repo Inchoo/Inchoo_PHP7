@@ -1,4 +1,8 @@
 # Change Log
+##[2.1.3] - 2017-08-21
+### Changed
+- fix for Varien Template Filter
+
 ##[2.1.2] - 2017-08-03
 ### Changed
 - fix for Zend Framework 1, thx to https://gist.github.com/renttek/29beaaa1e90909639501
