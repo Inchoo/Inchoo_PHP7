@@ -2,13 +2,14 @@
 <config>
     <modules>
         <Inchoo_PHP7>
-            <version>2.1.1</version>
+            <version>2.2.0</version>
         </Inchoo_PHP7>
     </modules>
 
     <global>
         <helpers>
             <core>
+                <!--<encryption_model>Inchoo_PHP7_Model_Encryption</encryption_model>-->
                 <rewrite>
                     <data>Inchoo_PHP7_Helper_Data</data>
                 </rewrite>

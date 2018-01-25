@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<config>
+    <check>
+        <php>
+            <extensions>
+                <mcrypt>
+                    <openssl/>
+                    <mcrypt/>
+                </mcrypt>
+            </extensions>
+        </php>
+    </check>
+</config>
