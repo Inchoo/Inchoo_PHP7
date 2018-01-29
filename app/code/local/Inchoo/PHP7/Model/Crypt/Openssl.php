@@ -1,10 +1,19 @@
 <?php
 
+/**
+ * Class Inchoo_PHP7_Model_Crypt_Openssl
+ */
 class Inchoo_PHP7_Model_Crypt_Openssl extends Varien_Crypt_Abstract
 {
+    /**
+     * Supported ciphers, Blowfish for CE, Rijndael(AES) for EE
+     */
     const CIPHER_BLOWFISH = 'blowfish';
     const CIPHER_RIJNDAEL = 'rijndael-128';
 
+    /**
+     * Supported cipher modes
+     */
     const MODE_ECB = 'ecb';
     const MODE_CBC = 'cbc';
 
@@ -34,7 +43,7 @@ class Inchoo_PHP7_Model_Crypt_Openssl extends Varien_Crypt_Abstract
             $this->setMode(self::MODE_ECB);
         }
 
-        //@todo: validate cipher and mode here
+        //@todo: validate supported cipher and mode?
 
         if (!$this->getInitVector() && self::MODE_CBC == $this->getMode()) {
             $ivSize = openssl_cipher_iv_length($this->getOpensslMethod());

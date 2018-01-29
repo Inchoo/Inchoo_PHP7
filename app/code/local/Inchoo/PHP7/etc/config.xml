@@ -9,7 +9,7 @@
     <global>
         <helpers>
             <core>
-                <!--<encryption_model>Inchoo_PHP7_Model_Encryption</encryption_model>-->
+                <!--<encryption_model>Inchoo_PHP7_Model_EncryptionEE</encryption_model>-->
                 <rewrite>
                     <data>Inchoo_PHP7_Helper_Data</data>
                 </rewrite>

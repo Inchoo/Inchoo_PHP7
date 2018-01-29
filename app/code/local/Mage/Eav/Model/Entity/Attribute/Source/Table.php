@@ -1,7 +1,36 @@
 <?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    Mage
+ * @package     Mage_Eav
+ * @copyright  Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
 
 class Mage_Eav_Model_Entity_Attribute_Source_Table extends Mage_Eav_Model_Entity_Attribute_Source_Abstract
 {
+    /**
+     * Test constant to check if this file is properly overridden
+     */
+    const INCHOO_PHP7 = true;
+
     /**
      * Default values for option cache
      *
@@ -16,8 +45,13 @@ class Mage_Eav_Model_Entity_Attribute_Source_Table extends Mage_Eav_Model_Entity
      */
     public function getAllOptions()
     {
+        /**
+         * PHP 7.2 fix.
+         * Weiler: Yes, I know it's ugly!!, but we have best compatibility this way. I'm open to suggestions
+         */
         $withEmpty = (func_num_args() == 1) ? func_get_arg(0) : true;
         $defaultValues = func_get_arg(1);
+        //
 
         $storeId = $this->getAttribute()->getStoreId();
         if (!is_array($this->_options)) {

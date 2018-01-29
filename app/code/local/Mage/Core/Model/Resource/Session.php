@@ -19,8 +19,8 @@
  * needs please refer to http://www.magento.com for more information.
  *
  * @category    Mage
- * @package     Mage_Core
- * @copyright  Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @package     Mage_Eav
+ * @copyright  Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -34,7 +34,10 @@
  */
 class Mage_Core_Model_Resource_Session implements Zend_Session_SaveHandler_Interface
 {
-    const INCHOO_PHP7 = true; // Test const to check if this file is properly overridden
+    /**
+     * Test constant to check if this file is properly overridden
+     */
+    const INCHOO_PHP7 = true;
 
     /**
      * Session maximum cookie lifetime
