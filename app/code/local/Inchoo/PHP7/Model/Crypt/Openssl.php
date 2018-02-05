@@ -121,10 +121,10 @@ class Inchoo_PHP7_Model_Crypt_Openssl extends Varien_Crypt_Abstract
             $data .= str_repeat("\0", $blockSize - $modus);
         }
 
-	    $openSslOptions = OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING;
-	    if(defined('OPENSSL_DONT_ZERO_PAD_KEY')) {
-		    $openSslOptions |=  OPENSSL_DONT_ZERO_PAD_KEY;
-	    }
+        $openSslOptions = OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING;
+        if(defined('OPENSSL_DONT_ZERO_PAD_KEY')) {
+            $openSslOptions |=  OPENSSL_DONT_ZERO_PAD_KEY;
+        }
 
         $encryptedData = openssl_encrypt(
             $data,
@@ -158,9 +158,9 @@ class Inchoo_PHP7_Model_Crypt_Openssl extends Varien_Crypt_Abstract
             return $data;
         }
 
-	    $openSslOptions = OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING;
+        $openSslOptions = OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING;
         if(defined('OPENSSL_DONT_ZERO_PAD_KEY')) {
-	        $openSslOptions |=  OPENSSL_DONT_ZERO_PAD_KEY;
+            $openSslOptions |=  OPENSSL_DONT_ZERO_PAD_KEY;
         }
 
         $decryptedData = openssl_decrypt(

@@ -417,11 +417,11 @@ abstract class Mage_Shipping_Model_Carrier_Abstract extends Varien_Object
      */
     public function getFinalPriceWithHandlingFee($cost)
     {
-	    /**
-	     * PHP 7.1 fix, casted to float to avoid warnings
-	     */
-	    $handlingFee = (float) $this->getConfigData('handling_fee');
-	    //
+        /**
+         * PHP 7.1 fix, casted to float to avoid warnings
+         */
+        $handlingFee = (float) $this->getConfigData('handling_fee');
+        //
 
         $handlingType = $this->getConfigData('handling_type');
         if (!$handlingType) {
