@@ -1,4 +1,12 @@
 # Change Log
+## [2.2.0] - 2018-02-09
+### Changed
+- PHP 7.1 compatibility, initial PHP 7.2 compatibility
+- topological sort removed, reverted to old config hack
+
+### Added
+- openssl adapter to replace deprecated mcrypt 
+
 ## [2.1.1] - 2017-06-07
 ### Changed
 - https instead of http for packages.firegento.com (by @EmPeWe).
