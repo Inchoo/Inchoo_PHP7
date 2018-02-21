@@ -47,10 +47,10 @@ class Mage_Eav_Model_Entity_Attribute_Source_Table extends Mage_Eav_Model_Entity
     {
         /**
          * PHP 7.2 fix.
-         * Weiler: Yes, I know it's ugly!!, but we have best compatibility this way. I'm open to suggestions
+         * I know it's ugly, but we have best compatibility this way without many rewrites. I'm open to suggestions
          */
-        $withEmpty = (func_num_args() == 1) ? func_get_arg(0) : true;
-        $defaultValues = func_get_arg(1);
+        $withEmpty = (func_num_args() >= 1) ? func_get_arg(0) : true;
+        $defaultValues = (func_num_args() >= 2) ? func_get_arg(1) : false;
         //
 
         $storeId = $this->getAttribute()->getStoreId();
