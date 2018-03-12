@@ -1,6 +1,12 @@
 <?php
 
-class Inchoo_PHP7_Helper_Data extends Mage_Core_Helper_Data
+if (Mage::getConfig()->getModuleConfig('Amasty_Orderattr')->is('active', 'true')) {
+    class Inchoo_PHP7_Helper_Data_Abstract extends Amasty_Orderattr_Helper_Core_Data {}
+} else {
+    class Inchoo_PHP7_Helper_Data_Abstract extends Mage_Core_Helper_Data {}
+}
+
+class Inchoo_PHP7_Helper_Data extends Inchoo_PHP7_Helper_Data_Abstract
 {
     /** @var string $_moduleName Compatibility for translations, and maybe other stuff which uses module names. */
     protected $_moduleName = 'Mage_Core';
