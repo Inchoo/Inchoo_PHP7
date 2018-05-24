@@ -3,6 +3,7 @@
 ## [3.0.0] - 2018-04-26
 ### Changed
 - PHP 7.1 compatibility, initial PHP 7.2 compatibility
+- extension moved to community code pool due to popular demand
 - topological sort removed, reverted to old config hack
 
 ### Added

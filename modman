@@ -1,13 +1,14 @@
 # app/code
-app/code/local/Inchoo/PHP7                          app/code/local/Inchoo/PHP7
-
-# app/etc
-app/etc/modules/Inchoo_PHP7.xml                     app/etc/modules/Inchoo_PHP7.xml
+app/code/community/Inchoo/PHP7                                       app/code/community/Inchoo/PHP7
 
 # mage/core
-app/code/local/Mage/Connect/Packager.php            app/code/local/Mage/Connect/Packager.php
-app/code/local/Mage/Core/Model/Resource/Session.php app/code/local/Mage/Core/Model/Resource/Session.php
-app/code/local/Mage/Sales/Model/Config/Ordered.php  app/code/local/Mage/Sales/Model/Config/Ordered.php
+app/code/community/Mage/Core/Model/Resource/Session.php              app/code/community/Mage/Core/Model/Resource/Session.php
+app/code/community/Mage/Core/functions.php                           app/code/community/Mage/Core/functions.php
+app/code/community/Mage/Eav/Model/Entity/Attribute/Source/Table.php  app/code/community/Mage/Eav/Model/Entity/Attribute/Source/Table.php
+app/code/community/Mage/Shipping/Model/Carrier/Abstract.php          app/code/community/Mage/Shipping/Model/Carrier/Abstract.php
 
-# shell
-shell/inchoo_php7_test.php                          shell/inchoo_php7_test.php
+# lib/varien
+app/code/community/Varien/Crypt.php                                  app/code/community/Varien/Crypt.php
+
+# app/etc
+app/etc/modules/Inchoo_PHP7.xml                                      app/etc/modules/Inchoo_PHP7.xml
