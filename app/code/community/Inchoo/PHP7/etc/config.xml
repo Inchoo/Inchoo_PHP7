@@ -17,6 +17,14 @@
             </core>
         </helpers>
 
+        <models>
+            <wishlist>
+                <rewrite>
+                    <observer>Inchoo_PHP7_Model_Wishlist_Observer</observer>
+                </rewrite>
+            </wishlist>
+        </models>
+
         <!-- Fix for incorrect sorting in the calculation of the discount -->
         <sales>
             <quote>
