@@ -14,10 +14,10 @@ class Inchoo_PHP7_Model_Wishlist_Observer extends Mage_Wishlist_Model_Observer
         $session = Mage::getSingleton('checkout/session');
 
         $urls = $session->getWishlistPendingUrls();
-        if (!is_array($urls) && !($urls instanceof Countable) && !$urls) $session->setWishlistIds([]);
+        if (!is_array($urls) && !($urls instanceof Countable) && !$urls) $session->setWishlistPendingUrls([]);
 
         $wishlistIds = $session->getWishlistIds();
-        if (!is_array($wishlistIds) && !($wishlistIds instanceof Countable) && !$wishlistIds) $session->setWishlistPendingUrls([]);
+        if (!is_array($wishlistIds) && !($wishlistIds instanceof Countable) && !$wishlistIds) $session->setWishlistIds([]);
 
         return parent::processAddToCart($observer);
     }
