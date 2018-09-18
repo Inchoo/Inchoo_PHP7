@@ -20,7 +20,7 @@ Read the [Wiki](https://github.com/Inchoo/Inchoo_PHP7/wiki)! It contains a lot o
 
 ## Compatibility
 
-### 3.0.0
+### 3.0.0 RC
 For Magento CE 1.9.3.* on PHP 7.0 and PHP 7.1 (recommended).
 
 This version introduced PHP 7.1 and 7.2 fixes and solution for deprecated mcrypt.
