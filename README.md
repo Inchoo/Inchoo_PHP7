@@ -11,6 +11,8 @@ https://inchoo.net/magento/magento-1-official-php-7-2-patches/
 Patches:  
 https://magento.com/tech-resources/download#download2240
 
+**Big THANKS to all contributors for reporting issues, testing, submitting pull requests.**
+
 # Inchoo_PHP7
 
 PHP 7 compatibility extension for Magento 1 core by Inchoo. 
