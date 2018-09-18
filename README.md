@@ -1,3 +1,16 @@
+# Deprecation notice
+
+**Magento released official PHP 7.2 patches for Magento 1 (September 2018), 
+which means this extension is not needed anymore!!**
+
+**Remove this module from your M1 store and use official patches.**
+
+More info:  
+https://inchoo.net/magento/magento-1-official-php-7-2-patches/
+
+Patches:  
+https://magento.com/tech-resources/download#download2240
+
 # Inchoo_PHP7
 
 PHP 7 compatibility extension for Magento 1 core by Inchoo. 
