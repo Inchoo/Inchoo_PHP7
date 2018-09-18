@@ -11,7 +11,7 @@ https://inchoo.net/magento/magento-1-official-php-7-2-patches/
 Patches:  
 https://magento.com/tech-resources/download#download2240
 
-**Big THANKS to all contributors for reporting issues, testing, submitting pull requests.**
+**Big THANKS to all contributors for reporting issues, testing, submitting pull requests. Your input was invaluable since official patch is based on work started here ;)**
 
 # Inchoo_PHP7
 
